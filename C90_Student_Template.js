@@ -104,4 +104,102 @@ function my_keydown(e)
 			car2_right();
 			console.log("tecla D");
 		}
+		if(car1X >= 675)
+		{
+			console.log("car1");
+			document.getElementById('game_status').innerHTML = "Carro 1 Venceu!!";
+		}
+		if(car2X >= 675)
+		{
+			console.log("car2");
+			document.getElementById('game_status').innerHTML = "Carro 2 Venceu!!";
+		}
+}
+
+function  car1_right(){
+	if(car1X <= 675)
+	{
+		car1X = car1X + 10;
+		console.log("Quando a seta para direita é pressionada, x = " + car1X + " | y = " + car1X)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car1_left(){
+	if(car1X >= 10)
+	{
+		car1X = car1X - 10;
+		console.log("Quando a seta para esquerda é pressionada, x = " + car1X + " | y = " + car1X)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car1_down(){
+	if(car1Y <= 529.9)
+	{
+		car1Y = car1Y + 10;
+		console.log("Quando a seta para baixo é pressionada, x = " + car1Y + " | y = " + car1Y)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car1_up(){
+	if(car1Y >= 10)
+	{
+		car1Y = car1Y - 10;
+		console.log("Quando a seta para cima é pressionada, x = " + car1Y + " | y = " + car1Y)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car2_right(){
+	if(car2X <= 675)
+	{
+		car2X = car2X + 10;
+		console.log("Quando a tecla D é pressionada, x = " + car2X + " | y = " + car2X)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car2_left(){
+	if(car2X >= 10)
+	{
+		car2X = car2X - 10;
+		console.log("Quando a tecla A é pressionada, x = " + car2X + " | y = " + car2X)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car2_down(){
+	if(car2Y <= 529.9)
+	{
+		car2Y = car2Y + 10;
+		console.log("Quando a tecla S é pressionada, x = " + car2Y + " | y = " + car2Y)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
+}
+
+function  car2_up(){
+	if(car2Y >= 10)
+	{
+		car2Y = car2Y - 10;
+		console.log("Quando a tecla W é pressionada, x = " + car2Y + " | y = " + car2Y)
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
+	}
 }
